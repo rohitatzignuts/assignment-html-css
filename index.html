@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css" />
+    <title>Panto</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/db99b20772.js" crossorigin="anonymous"></script>
 </head>
@@ -31,7 +32,25 @@
                     <span class="cart-tooltip">0</span>
                 </div>
             </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="nav-links" id="nav-links">
+                    <li>
+                        <select name="furniture-category" id="furniture-category" class="list-select">
+                            <option value="bedroom">Bedroom</option>
+                            <option value="living-room">Living Room</option>
+                            <option value="dining-room">Dining Room</option>
+                        </select>
+                    </li>
+                    <li>Shop</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            
+            
         </nav>
+        
         <div class="hero-content">
             <div class="hero-main-text">
                 Make Your Interior More <br>
@@ -88,81 +107,111 @@
             <h1>Best Selling Product</h1>
             <div class="best-selling-sort">
                 <ul> 
-                    <li class="active">chair</li>
-                    <li>Beds</li>
-                    <li>Sofa</li>
-                    <li>lamp</li>
+                    <button class="active">chair</button>
+                    <button>Beds</button>
+                    <button>Sofa</button>
+                    <button>lamp</button>
                 </ul>
             </div>
-            <div class="best-selling-carrasole">
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonials-card">
+                        <article class="best-selling-card">
+                            <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
+                            <div class="best-selling-card-body">
+                                <span>Chair</span>
+                                <p>Sakarias Armchair</p>
+                                <div class="card-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="card-price">
+                                    <p><sup>$</sup>&nbsp;392</p>
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+                    <div class="swiper-slide testimonials-card">
+                        <article class="best-selling-card">
+                            <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
+                            <div class="best-selling-card-body">
+                                <span>Chair</span>
+                                <p>Sakarias Armchair</p>
+                                <div class="card-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="card-price">
+                                    <p><sup>$</sup>&nbsp;392</p>
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+                    <div class="swiper-slide testimonials-card">
+                        <article class="best-selling-card">
+                            <div class="best-selling-card-image"><img src="./public/chair4.png" alt="" srcset=""></div>
+                            <div class="best-selling-card-body">
+                                <span>Chair</span>
+                                <p>Sakarias Armchair</p>
+                                <div class="card-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="card-price">
+                                    <p><sup>$</sup>&nbsp;392</p>
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair4.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+                    <div class="swiper-slide testimonials-card">
+                        <article class="best-selling-card">
+                            <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
+                            <div class="best-selling-card-body">
+                                <span>Chair</span>
+                                <p>Sakarias Armchair</p>
+                                <div class="card-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="card-price">
+                                    <p><sup>$</sup>&nbsp;392</p>
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </article>
+                    <div class="swiper-slide testimonials-card">
+                        <article class="best-selling-card">
+                            <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
+                            <div class="best-selling-card-body">
+                                <span>Chair</span>
+                                <p>Sakarias Armchair</p>
+                                <div class="card-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="card-price">
+                                    <p><sup>$</sup>&nbsp;392</p>
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="larr"><span>&larr;</span></div>
-            <div class="rarr"><span>&rarr;</span></div>
-            <a href="">View All &rarr;</a>
+
+            <a href="" class="best-view-all">View All &rarr;</a>
         </div>
     </section>
     <!-- experiences section -->
@@ -183,5 +232,184 @@
             </div>
         </div>
     </section>
+    <!-- Materials section  -->
+    <section class="materials">
+        <div class="materials-flex">
+            <div class="materials-flex-content">
+                <span>Materials</span>
+                <h1>Very serious materials for making furniture</h1>
+                <p>Because panto was very serious about designing furniture for our environment, using a very expensive and famous capital but at a relatively low price</p>
+                <a href="">More Info &rarr;</a>
+            </div>
+            <div class="materials-flex-image">
+                <div class="materials-flex-image-grid">
+                    <div class="double">
+                        <img src="./public/material-3.jpeg" alt="img">
+                        <img src="./public/material-1.jpeg" alt="img">
+                    </div>
+                    <div class="single">
+                        <img src="./public/material-2.jpeg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials section  -->
+    <section class="testimonials">
+        <div class="testimonials-text">
+            <p>Testimonials</p>
+            <b>Our Client Reviews</b>
+        </div>
+        <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">Slide 1</div> -->
+                    <div class="swiper-slide testimonials-card"
+                        style="background: url('./public/test-card-1.jpeg');
+                        width: 75%;
+                        height: 550PX;
+                        background-position: center;
+                        background-size: cover;">
+                            <div class="testimonials-card-body">
+                                <img src="./public/test-user-1.png" alt="img">
+                                <p class="testimonials-card-body-name">Bang Upin</p>
+                                <span class="testimonials-card-body-firm">Pedagang Asongan</span>
+                                <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                                <div class="testimonials-card-body-ratings">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="swiper-slide testimonials-card"
+                    style="background: url('./public/test-card-2.jpeg');
+                    width: 75%;
+                    height: 550PX;
+                    background-position: center;
+                    background-size: cover;">
+                        <div class="testimonials-card-body">
+                            <img src="./public/test-user-2.png" alt="img">
+                            <p class="testimonials-card-body-name">Bang Upin</p>
+                            <span class="testimonials-card-body-firm">Pedagang Asongan</span>
+                            <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                            <div class="testimonials-card-body-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials-card"
+                    style="background: url('./public/test-card-3.jpeg');
+                    width: 75%;
+                    height: 550PX;
+                    background-position: center;
+                    background-size: cover;">
+                        <div class="testimonials-card-body">
+                            <img src="./public/test-user-3.png" alt="img">
+                            <b class="testimonials-card-body-name">Bang Upin</b>
+                            <span class="testimonials-card-body-firm">Pedagang Asongan</span>
+                            <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                            <div class="testimonials-card-body-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials-card"
+                    style="background: url('./public/test-card-1.jpeg');
+                    width: 75%;
+                    height: 550PX;
+                    background-position: center;
+                    background-size: cover;">
+                        <div class="testimonials-card-body">
+                            <img src="./public/test-user-1.png" alt="img">
+                            <p class="testimonials-card-body-name">Bang Upin</p>
+                            <span class="testimonials-card-body-firm">Pedagang Asongan</span>
+                            <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                            <div class="testimonials-card-body-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide testimonials-card"
+                    style="background: url('./public/test-card-2.jpeg');
+                    width: 75%;
+                    height: 550PX;
+                    background-position: center;
+                    background-size: cover;">
+                        <div class="testimonials-card-body">
+                            <img src="./public/test-user-2.png" alt="img">
+                            <p class="testimonials-card-body-name">Bang Upin</p>
+                            <span class="testimonials-card-body-firm">Pedagang Asongan</span>
+                            <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
+                            <div class="testimonials-card-body-ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer>
+        <div>
+            <div class="footer-text">
+                <h1>Panto</h1>
+                <p>The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</p>
+            </div>
+            <div class="footer-links">
+                <div class="services">
+                    <p>services</p>
+                    <a href="">Email Marketing</a>
+                    <a href="">Campaings</a>
+                    <a href="">Brandings</a>
+                </div>
+                <div class="furniture">
+                    <p>furniture</p>
+                    <a href="">Beds</a>
+                    <a href="">Chairs</a>
+                    <a href="">All</a>
+                </div>  
+                <div class="Follow-Us">
+                    <p>Follow Us</p>
+                    <a><i class="fa-brands fa-facebook"></i>Facebook</a>
+                    <a><i class="fa-brands fa-twitter"></i>Twitter</a>
+                    <a><i class="fa-brands fa-instagram"></i>Instagrams</a>
+                </div>  
+            </div>
+        </div>
+        <div class="copyright">
+            <span>Copyright © 2021</span>
+            <div class="copyright-link">
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <!-- swiper cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
