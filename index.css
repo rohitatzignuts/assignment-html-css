@@ -12,11 +12,13 @@ body {
 
 /* hero section */
 .hero {
-    background: #ffffff url('./public/hero-bg.jpeg') no-repeat;
+    background: url('./public/hero/hero-bg.jpeg') no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: center;
     padding: 40px 5%;
+    position: relative;
+    z-index: 0;
 }
 
 .navbar {
@@ -124,7 +126,7 @@ li {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* adjust this value based on your navbar height */
+    top: 60px;
     right: 0;
     background-color: #fff;
     width: 200px;
@@ -147,12 +149,12 @@ input[placeholder="Search furniture"] {
 
 @media screen and (max-width: 400px) {
     .hero {
-        padding: 20px 2.5%;
+        padding: 1rem;
+        height: max-content;
     }
-
     .menu-toggle {
         display: block;
-        cursor: pointer;
+        cursor: pointer;    
     }
 
     .hero-content {
@@ -180,13 +182,14 @@ input[placeholder="Search furniture"] {
     }
     /* hero-content */
     .hero-main-text {
-        display: none;
+        font-size: 1.5rem;
+        line-height: 3rem;
     }
 
     .hero-sub-text {
-        font-size: 12px;
+        font-size: 10px;
         line-height: 18px;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .hero-form > form > input {
@@ -198,66 +201,43 @@ input[placeholder="Search furniture"] {
         box-shadow: 0 0 25px #ffffff;
     }
 }
-
-@media screen and (max-width: 1000px) {
+/* max-width: 1025px */
+@media (min-width: 401px) and (max-width: 1024px) {
     .hero {
-        background: #ffffff url('./public/hero-bg.jpeg') no-repeat;
-        background-size: cover;
-        height: 100vh;
-        background-position: center;
-        padding: 20px 2.55%;
+        padding: 80px 10%;
     }
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .nav-cart > div {
-        position: relative;
-    }
-
-    .fa-bag-shopping {
-        color: #ffffff;
-        font-size: 1.25rem;
-    }
-
-    .cart-tooltip {
-        font-size: 0.50rem;
-        padding: 5px 7.5px;
-    }
-
     li {
-        font-size: 14px;
+        font-size: 20px;
     }
-
     .list-select {
-        line-height: 21px;
-        font-size: 14px;
+        font-size: 20px;
     }
-
-    .nav-links {
-        gap: 3rem;
-    }
-
     /* hero-content */
     .hero-main-text {
-        font-size: 60px;
-        line-height: 94px;
+        font-size: 80px;
+        line-height: 114px;
+        letter-spacing: 10px;
     }
-
     .hero-sub-text {
-        font-size: 20px;
-        line-height: 30px;
+        font-weight: 100;
+    }
+    .hero-form {
+        margin-top: 5rem;
     }
 }
+
 /* why-choose-us */
 
 .why-choose-us {
-    color: #000000;
-    display: grid;
-    grid-template-columns: 25% auto;
+    position: relative;
+    margin-top: -50px;
     padding: 80px 5%;
+    z-index: 1; 
+    display: flex;
+    margin-right: 2.5rem;
+    color: #000;
+    overflow: hidden; 
+
 }
 
 .why-choose-us-text {
@@ -267,11 +247,14 @@ input[placeholder="Search furniture"] {
     text-align: left;
     font-weight: bold;
     padding-left: 2rem;
+    margin-top: 3rem;
+    flex: 1;
 }
 
 .why-choose-us-reasons {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    flex: 3;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
@@ -305,28 +288,47 @@ input[placeholder="Search furniture"] {
 }
 
 @media screen and (max-width: 400px) {
-    .why-choose-us {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .why-choose-us {
-        padding: 40px 2.5%;
-    }
-
-    .why-choose-us-reasons {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        gap: 1rem;
-    }
-
-    .why-choose-us-reasons > article {
+    .why-choose-us{
+        margin: 1rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
+        height: max-content;
+    }
+    .why-choose-us-text{
+        margin-top: 0;
+        padding-left: 1.5rem;
+    }
+    .why-choose-us-reasons{
+        display: flex;
+        flex-direction: column;
+    }
+    .why-choose-us-reasons article {
+        padding: 1rem 1.5rem;
+    }
+
+}
+
+@media (min-width: 401px) and (max-width: 1024px) {
+    .why-choose-us {
+        margin-right: 0rem;
+        margin-top: 1.5rem;
+    }
+    
+    .why-choose-us-text {
+        font-size: 30px;
+        line-height: 60px;
+    }
+    
+    .why-choose-us-reasons {
+        display: grid;
+        flex: 3;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+    
+    .why-choose-us-reasons > article {
         justify-content: space-between;
-        align-content: space-between;
     }
 }
 /* best selling products */
@@ -337,6 +339,22 @@ input[placeholder="Search furniture"] {
     background: #F7F7F7;
     padding: 40px 5%;
     text-align: center;
+}
+.tablinks {
+    background-color: #f2f2f2;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tablinks.active {
+    background-color: #ccc;
+}
+
+.tablinks:hover {
+    background-color: #ddd;
 }
 
 .best-selling-content > .swiper{
@@ -350,28 +368,37 @@ input[placeholder="Search furniture"] {
     text-align: center;    
     padding: 1.5rem ;
 }
-.best-selling-sort{
-    width: 350px;
-    margin: 1rem auto;
-
-}
-.best-selling-sort ul {
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: #EEEEEE;
-    border-radius: 25px;
-    padding: 5px;
-}
-.best-selling-sort ul button {
-    padding: 0.75rem 1rem;      
-    cursor: pointer;
-    border: none;
-    font-size: 18px;
-}
-.best-selling-sort ul .active {
+.best-selling-sort {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto; 
+    padding: 0.5rem;
     background-color: #ffffff;
-    border-radius: 25px;
+    width: max-content;
+    align-self: center;
+    border-radius: 35px; 
 }
+
+.tablinks {
+    background-color: #f2f2f2; 
+    border: none;
+    color: #555; 
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 35px; 
+    margin: 0 5px; 
+}
+
+.viewAll{
+    color: #E58411;
+    text-decoration: none;
+}
+.tablinks.active {
+    background-color: #ccc; 
+    color: #000; 
+}
+
 .best-selling-carrasole {
     display: grid;
     grid-template-columns: repeat(4,auto);
@@ -442,16 +469,28 @@ input[placeholder="Search furniture"] {
 
 @media screen and (max-width : 400px) {
     .best-selling{
-        height: 125vh;
+        height: max-content;
     }
     .best-view-all{
         display: none;
     }
+    .best-selling-sort{
+        max-width: 350px;
+    }
     .best-selling-content > h1{
-        font-size: 36px;    
+        font-size: 26px;    
     }   
-    .best-selling-sort ul li {
-        padding: 0.75rem 1rem;      
+    .tablinks {
+        background-color: #f2f2f2;
+        border: none;
+        color: #333;
+        padding: 7.5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .viewAll{
+        display: block;
+        margin-top: 0;
     }
     .best-selling-carrasole {
         display: grid;
@@ -461,22 +500,21 @@ input[placeholder="Search furniture"] {
         margin: 4rem auto 3rem;
     }
 }
-@media screen and (max-width : 1000px) {
+
+@media (min-width: 401px) and (max-width: 1024px) {
     .best-selling{
-        height: 95vh;
+        height: 80vh;
+        padding: 40px 5%;
     }
-    .best-selling-content > h1{
-        font-size: 36px;    
-    }   
-    .best-selling-sort ul li {
-        padding: 0.75rem 1rem;      
-    }
-    .best-selling-carrasole {
-        display: grid;
-        grid-template-columns: repeat(4,auto);
-        gap: 2rem;
+    .best-selling-content > .swiper{
         width: 90%;
-        margin: 4rem auto 3rem;
+        height: 100%;
+    }
+    .best-selling-card{
+        border-radius: 25px;
+    }
+    .best-selling-card-image{
+        background-color: #FAFAFA;
     }
 }
 /* experiences section */
@@ -484,11 +522,18 @@ input[placeholder="Search furniture"] {
 .experience {
     height: 100vh;
     color: #000000;
-    padding: 10% 5% 15% 0;
+    padding: 10% 5% 7.5% 0;
 }
-.experience-flex , .materials-flex{
+.experience-flex {
     display: flex;
-    gap: 3.5rem;
+    gap: 1.5rem;
+}
+.materials-flex{
+    display: flex;
+    gap: 6.5rem;
+}
+.experience-flex-image{
+    position: relative;
 }
 .experience-flex-image , .materials-flex-image{
     flex: 1;
@@ -496,6 +541,28 @@ input[placeholder="Search furniture"] {
 .experience-flex-image > div > img , .materials-flex-image > div > img{
     object-fit: contain;
     width: 100%;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.experience-img-shadow-1 {
+    position: absolute;
+    top: -80px;
+    left: -150px;
+    width: 100%;
+    height: 100%;
+    background: #F7F7F7;
+    z-index: -1;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.experience-img-shadow-2 {
+    position: absolute;
+    top: 80px;
+    left: 75px;
+    width: 100%;
+    height: 80%;
+    background: #F7F7F7;
+    z-index: -2;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -507,7 +574,12 @@ input[placeholder="Search furniture"] {
     text-align: left;
     flex: 1;
     padding: 2.5rem 7rem 2.5rem 2.5rem;
+    margin-left: 5rem;
 }
+.luminous-shadow {
+    filter: drop-shadow(0px 25px 15px rgb(229, 132, 17,0.25));
+}
+
 .experience-flex-content span , .materials-flex-content span{
     text-transform: uppercase;
     font-size: 18px;
@@ -537,7 +609,7 @@ input[placeholder="Search furniture"] {
 .materials{
     height: 100vh;
     color: #000000;
-    padding: 10% 0% 15% 5%;
+    padding: 5% 0% 15% 5%;
 }
 .materials-flex-image-grid{
     display: grid;
@@ -551,11 +623,12 @@ input[placeholder="Search furniture"] {
 .materials-flex-image-grid .single {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .materials-flex-image-grid .double {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: space-between;
 }
 .materials-flex-content{
@@ -576,33 +649,76 @@ input[placeholder="Search furniture"] {
     align-self: flex-end;
     margin-bottom: 2.5rem;
 }
+.materials-img-shadow{
+    position: absolute;
+    top: 60px;
+    left: 125px;
+    width: 100%;
+    height: 50%;
+    background: #F7F7F7;
+    z-index: -1;
+    border-radius: 15px;
 
-@media screen and (max-width : 400) {
-
-    .experience-flex , .materials-flex{
-        display: flex;
-        gap: 3.5rem;
+}
+.luminous-shadow-material{
+    filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.15));
+}
+@media screen and (max-width : 400px) {
+    .experience {
+        height: max-content;
+    }   
+    .experience-flex-content{
+        margin-left: 1rem;
     }
-    .materials-flex-image{
-        display: hide;    
+    .experience-flex-image{
+        display: none;
     }
-
-    .experience-flex-content span , .materials-flex-content span{
-        text-transform: uppercase;
-        font-size: 10px;
-        line-height: 15px;
-    }
-    .experience-flex-content h1 , .materials-flex-content h1{
-        font-size: 25px;
-        line-height: 25px;
+    .materials-flex{
+        gap: 2.5rem;
     }
     .materials{
-        height: 100vh;
-        color: #000000;
-        padding: 10% 0% 15% 5%;
+        height: max-content;
     }
-    .materials-flex-image-grid{
+    .materials-flex-image{
         display: none;
+    }
+    .materials-flex-image-grid .double > img{
+        border-radius: 15px;
+    }
+    .materials-flex-image-grid .single > img{
+        border-radius: 15px;
+        height: 75%;
+        align-self: flex-end;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 1024px) {
+    .experience  {
+        height: max-content;
+    }   
+    .experience-img-shadow-1 {
+        top: -50px;
+    }
+    .experience-img-shadow-2 {
+        height: 50%;
+    }
+    .materials-flex{
+        gap: 2.5rem;
+    }
+    .materials{
+        height: max-content;
+        padding: 5% 0% 5% 5%;
+        vertical-align: bottom;
+    }
+    .materials-flex-image-grid .double > img{
+        border-radius: 15px;
+    }
+    .materials-flex-image-grid .single > img{
+        border-radius: 15px;
+        height: 75%;
+        align-self: flex-end;
+        margin-bottom: 2.5rem;
     }
 }
 /* testimonials */
@@ -627,20 +743,22 @@ input[placeholder="Search furniture"] {
     letter-spacing: 0em;
     text-align: center;
 }
-.testimonials-card{
+.testimonials-card {
     border-radius: 15px;
 }
-.testimonials-card-body{
+
+.testimonials-card-body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     padding: 1rem;
-    width:80%;
+    width: 80%;
     align-items: center;
     border-radius: 15px;
     position: relative;
     margin-top: 50%;
 }
+
 .testimonials-card-body > img {
     max-width: 75px;
     max-height: 75px;
@@ -694,6 +812,19 @@ input[placeholder="Search furniture"] {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+@media (min-width: 401px) and (max-width: 1024px) {
+    .testimonials{
+        height: max-content ;
+        color: #000000;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+.testimonials-card-body {
+    margin-top: 60%;
+}
+
 }
 /* footer  */
 
@@ -781,85 +912,83 @@ footer > div{
 
 @media screen and (max-width : 400px) {
 
-footer > div{
-    flex-direction: column;
-    padding: 6%;
+    footer > div{
+        flex-direction: column;
+        padding: 6%;
+    }
+    .footer-text{
+        padding-right: 2.5rem;
+    }
+    .footer-text > p {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0em;
+        margin-top: 1rem;
+    }
+    .footer-links{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer-links > div {
+        text-align: left;
+    }
+    .footer-links > div > p{
+        text-transform: capitalize;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: -0.23181818425655365px;
+        color: #F6973F;
+    }
+    .footer-links > div > a{
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: #1E1E1E;
+    }
+    .footer-links > div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .footer-links > .furniture{
+        align-items: flex-end;
+    }
+    .Follow-Us > a > i {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0em;
+        margin-right: 0.5rem;
+    }
+    .Follow-Us > a {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0em;
+    }
+    .copyright{
+        display: flex;
+        justify-content: space-between;
+    }
+    .copyright > span {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: -0.20454545319080353px;
+        font-weight: lighter;
+    }
+    .copyright-link{
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    .copyright-link > a {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-decoration: none;
+        color: #1E1E1E;
+    }
 }
-.footer-text{
-    padding-right: 2.5rem;
-}
-.footer-text > p {
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0em;
-    margin-top: 1rem;
-}
-.footer-links{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.footer-links > div {
-    text-align: left;
-}
-.footer-links > div > p{
-    text-transform: capitalize;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: -0.23181818425655365px;
-    color: #F6973F;
-}
-.footer-links > div > a{
-    text-decoration: none;
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0em;
-    color: #1E1E1E;
-}
-.footer-links > div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.footer-links > .furniture{
-    align-items: flex-end;
-}
-.Follow-Us > a > i {
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0em;
-    margin-right: 0.5rem;
-}
-.Follow-Us > a {
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0em;
-}
-.copyright{
-    display: flex;
-    justify-content: space-between;
-}
-.copyright > span {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: -0.20454545319080353px;
-    font-weight: lighter;
-}
-.copyright-link{
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-}
-.copyright-link > a {
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-decoration: none;
-    color: #1E1E1E;
-}
-
-}
-

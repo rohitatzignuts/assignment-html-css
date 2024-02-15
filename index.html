@@ -32,7 +32,7 @@
                     <span class="cart-tooltip">0</span>
                 </div>
             </div>
-            <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
                 <ul class="nav-links" id="nav-links">
                     <li>
@@ -106,112 +106,100 @@
         <div class="best-selling-content">
             <h1>Best Selling Product</h1>
             <div class="best-selling-sort">
-                <ul> 
-                    <button class="active">chair</button>
-                    <button>Beds</button>
-                    <button>Sofa</button>
-                    <button>lamp</button>
-                </ul>
+                <button class="tablinks" onclick="openTab(event, 'all')">View All</button>
+                <button class="tablinks" onclick="openTab(event, 'chair')" id="defaultOpen">Chair</button>
+                <button class="tablinks" onclick="openTab(event, 'beds')">Beds</button>
+                <button class="tablinks" onclick="openTab(event, 'sofa')">Sofa</button>
             </div>
+        
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide testimonials-card">
-                        <article class="best-selling-card">
-                            <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
-                            <div class="best-selling-card-body">
-                                <span>Chair</span>
-                                <p>Sakarias Armchair</p>
-                                <div class="card-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                        <div id="chair" class="tabcontent" id="chair">
+                            <article class="best-selling-card">
+                                <div class="best-selling-card-image"><img src="./public/best-selling/chair1.png" alt="" srcset=""></div>
+                                <div class="best-selling-card-body">
+                                    <span>Chair</span>
+                                    <p>Sakarias Armchair</p>
+                                    <div class="card-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="card-price">
+                                        <p><sup>$</sup>&nbsp;392</p>
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </div>
                                 </div>
-                                <div class="card-price">
-                                    <p><sup>$</sup>&nbsp;392</p>
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                     <div class="swiper-slide testimonials-card">
-                        <article class="best-selling-card">
-                            <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
-                            <div class="best-selling-card-body">
-                                <span>Chair</span>
-                                <p>Sakarias Armchair</p>
-                                <div class="card-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                        <div id="beds" class="tabcontent">
+                            <article class="best-selling-card" id="beds">
+                                <div class="best-selling-card-image"><img src="./public/best-selling/chair2.png" alt="" srcset=""></div>
+                                <div class="best-selling-card-body">
+                                    <span>Beds</span>
+                                    <p>Sakarias Armchair</p>
+                                    <div class="card-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="card-price">
+                                        <p><sup>$</sup>&nbsp;392</p>
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </div>
                                 </div>
-                                <div class="card-price">
-                                    <p><sup>$</sup>&nbsp;392</p>
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                     <div class="swiper-slide testimonials-card">
-                        <article class="best-selling-card">
-                            <div class="best-selling-card-image"><img src="./public/chair4.png" alt="" srcset=""></div>
-                            <div class="best-selling-card-body">
-                                <span>Chair</span>
-                                <p>Sakarias Armchair</p>
-                                <div class="card-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                        <div id="sofa" class="tabcontent">
+                            <article class="best-selling-card" id="sofa">
+                                <div class="best-selling-card-image"><img src="./public/best-selling/chair4.png" alt="" srcset=""></div>
+                                <div class="best-selling-card-body">
+                                    <span>Sofa</span>
+                                    <p>Sakarias Armchair</p>
+                                    <div class="card-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="card-price">
+                                        <p><sup>$</sup>&nbsp;392</p>
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </div>
                                 </div>
-                                <div class="card-price">
-                                    <p><sup>$</sup>&nbsp;392</p>
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                     <div class="swiper-slide testimonials-card">
-                        <article class="best-selling-card">
-                            <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
-                            <div class="best-selling-card-body">
-                                <span>Chair</span>
-                                <p>Sakarias Armchair</p>
-                                <div class="card-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                        <div id="lamp" class="tabcontent">
+                            <article class="best-selling-card" id="chair">
+                                <div class="best-selling-card-image"><img src="./public/best-selling/chair2.png" alt="" srcset=""></div>
+                                <div class="best-selling-card-body">
+                                    <span>Chair</span>
+                                    <p>Sakarias Armchair</p>
+                                    <div class="card-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="card-price">
+                                        <p><sup>$</sup>&nbsp;392</p>
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </div>
                                 </div>
-                                <div class="card-price">
-                                    <p><sup>$</sup>&nbsp;392</p>
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide testimonials-card">
-                        <article class="best-selling-card">
-                            <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
-                            <div class="best-selling-card-body">
-                                <span>Chair</span>
-                                <p>Sakarias Armchair</p>
-                                <div class="card-rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="card-price">
-                                    <p><sup>$</sup>&nbsp;392</p>
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>   
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
-
-            <a href="" class="best-view-all">View All &rarr;</a>
+            <a href="#" class="viewAll">View all &rarr;</a>
         </div>
     </section>
     <!-- experiences section -->
@@ -219,9 +207,9 @@
         <div class="experience-flex">
             <div class="experience-flex-image">
                 <div>
-                    <img src="./public/experience.jpeg" alt="">
-                    <div class="img-shadow-1"></div>
-                    <div class="img-shadow-2"></div>
+                    <img src="./public/experience/experience.jpeg" class="luminous-shadow" alt="img">
+                    <div class="experience-img-shadow-1"></div>
+                    <div class="experience-img-shadow-2"></div>
                 </div>
             </div>
             <div class="experience-flex-content">
@@ -244,11 +232,12 @@
             <div class="materials-flex-image">
                 <div class="materials-flex-image-grid">
                     <div class="double">
-                        <img src="./public/material-3.jpeg" alt="img">
-                        <img src="./public/material-1.jpeg" alt="img">
+                        <img src="./public/materials/material-3.jpeg" alt="img" class="luminous-shadow-material">
+                        <img src="./public/materials/material-1.jpeg" alt="img" class="luminous-shadow-material">
                     </div>
                     <div class="single">
-                        <img src="./public/material-2.jpeg" alt="img">
+                        <img src="./public/materials/material-2.jpeg" alt="img" class="luminous-shadow-material">
+                        <div class="materials-img-shadow"></div>
                     </div>
                 </div>
             </div>
@@ -265,13 +254,13 @@
                 <div class="swiper-wrapper">
                     <!-- <div class="swiper-slide">Slide 1</div> -->
                     <div class="swiper-slide testimonials-card"
-                        style="background: url('./public/test-card-1.jpeg');
+                        style="background: url('./public/testimonials/test-card-1.jpeg');
                         width: 75%;
                         height: 550PX;
                         background-position: center;
                         background-size: cover;">
                             <div class="testimonials-card-body">
-                                <img src="./public/test-user-1.png" alt="img">
+                                <img src="./public/testimonials/test-user-1.png" alt="img">
                                 <p class="testimonials-card-body-name">Bang Upin</p>
                                 <span class="testimonials-card-body-firm">Pedagang Asongan</span>
                                 <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
@@ -285,13 +274,13 @@
                             </div>
                     </div>
                     <div class="swiper-slide testimonials-card"
-                    style="background: url('./public/test-card-2.jpeg');
+                    style="background: url('./public/testimonials/test-card-2.jpeg');
                     width: 75%;
                     height: 550PX;
                     background-position: center;
                     background-size: cover;">
                         <div class="testimonials-card-body">
-                            <img src="./public/test-user-2.png" alt="img">
+                            <img src="./public/testimonials/test-user-2.png" alt="img">
                             <p class="testimonials-card-body-name">Bang Upin</p>
                             <span class="testimonials-card-body-firm">Pedagang Asongan</span>
                             <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
@@ -305,13 +294,13 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonials-card"
-                    style="background: url('./public/test-card-3.jpeg');
+                    style="background: url('./public/testimonials/test-card-3.jpeg');
                     width: 75%;
                     height: 550PX;
                     background-position: center;
                     background-size: cover;">
                         <div class="testimonials-card-body">
-                            <img src="./public/test-user-3.png" alt="img">
+                            <img src="./public/testimonials/test-user-3.png" alt="img">
                             <b class="testimonials-card-body-name">Bang Upin</b>
                             <span class="testimonials-card-body-firm">Pedagang Asongan</span>
                             <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
@@ -325,13 +314,13 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonials-card"
-                    style="background: url('./public/test-card-1.jpeg');
+                    style="background: url('./public/testimonials/test-card-1.jpeg');
                     width: 75%;
                     height: 550PX;
                     background-position: center;
                     background-size: cover;">
                         <div class="testimonials-card-body">
-                            <img src="./public/test-user-1.png" alt="img">
+                            <img src="./public/testimonials/test-user-1.png" alt="img">
                             <p class="testimonials-card-body-name">Bang Upin</p>
                             <span class="testimonials-card-body-firm">Pedagang Asongan</span>
                             <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>
@@ -345,13 +334,13 @@
                         </div>
                     </div>
                     <div class="swiper-slide testimonials-card"
-                    style="background: url('./public/test-card-2.jpeg');
+                    style="background: url('./public/testimonials/test-card-2.jpeg');
                     width: 75%;
                     height: 550PX;
                     background-position: center;
                     background-size: cover;">
                         <div class="testimonials-card-body">
-                            <img src="./public/test-user-2.png" alt="img">
+                            <img src="./public/testimonials/test-user-2.png" alt="img">
                             <p class="testimonials-card-body-name">Bang Upin</p>
                             <span class="testimonials-card-body-firm">Pedagang Asongan</span>
                             <p class="testimonials-card-body-review">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“</p>

@@ -1,66 +1,112 @@
- <!-- <div class="best-selling-carrasole ">
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide testimonials-card tabContent" id="chair">
+            <article class="best-selling-card">
+                <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
+                <div class="best-selling-card-body">
+                    <span>Chair</span>
+                    <p>Sakarias Armchair</p>
+                    <div class="card-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </article>
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+                    <div class="card-price">
+                        <p><sup>$</sup>&nbsp;392</p>
+                        <i class="fa-solid fa-circle-plus"></i>
                     </div>
-                </article>
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+                </div>
+            </article>
+        </div>
+        <div class="swiper-slide testimonials-card tabContent" id="beds">
+            <article class="best-selling-card">
+                <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
+                <div class="best-selling-card-body">
+                    <span>Beds</span>
+                    <p>Sakarias Armchair</p>
+                    <div class="card-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                </article>
-                <article class="best-selling-card">
-                    <div class="best-selling-card-image"><img src="./public/chair4.png" alt="" srcset=""></div>
-                    <div class="best-selling-card-body">
-                        <span>Chair</span>
-                        <p>Sakarias Armchair</p>
-                        <div class="card-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <div class="card-price">
-                            <p><sup>$</sup>&nbsp;392</p>
-                            <i class="fa-solid fa-circle-plus"></i>
-                        </div>
+                    <div class="card-price">
+                        <p><sup>$</sup>&nbsp;392</p>
+                        <i class="fa-solid fa-circle-plus"></i>
                     </div>
-                </article>
-            </div> -->
+                </div>
+            </article>
+        </div>
+        <div class="swiper-slide testimonials-card tabContent" id="sofa">
+            <article class="best-selling-card">
+                <div class="best-selling-card-image"><img src="./public/chair4.png" alt="" srcset=""></div>
+                <div class="best-selling-card-body">
+                    <span>Sofa</span>
+                    <p>Sakarias Armchair</p>
+                    <div class="card-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="card-price">
+                        <p><sup>$</sup>&nbsp;392</p>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="swiper-slide testimonials-card tabContent" id="lamp">
+            <article class="best-selling-card">
+                <div class="best-selling-card-image"><img src="./public/chair1.png" alt="" srcset=""></div>
+                <div class="best-selling-card-body">
+                    <span>Lamp</span>
+                    <p>Sakarias Armchair</p>
+                    <div class="card-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="card-price">
+                        <p><sup>$</sup>&nbsp;392</p>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="swiper-slide testimonials-card">
+            <article class="best-selling-card">
+                <div class="best-selling-card-image"><img src="./public/chair2.png" alt="" srcset=""></div>
+                <div class="best-selling-card-body">
+                    <span>Chair</span>
+                    <p>Sakarias Armchair</p>
+                    <div class="card-rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="card-price">
+                        <p><sup>$</sup>&nbsp;392</p>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<div id="London" class="tabcontent">
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+</div>
+
+    <div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>

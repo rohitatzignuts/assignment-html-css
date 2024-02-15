@@ -13,17 +13,18 @@ var swiper = new Swiper(".mySwiper", {
         640: {
             slidesPerView: 2,
             spaceBetween: 20,
-            },
+        },
         768: {
             slidesPerView: 2,
             spaceBetween: 40,
         },
-        1024: {
-            slidesPerView: 3,
+        1500: {
+            slidesPerView: 3, // Set slidesPerView to 3
             spaceBetween: 50,
-        },
+        },  
     },
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -46,4 +47,25 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    if (tabName === 'all') {
+        // Show all tab contents
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "block";
+        }
+    } else {
+        document.getElementById(tabName).style.display = "block";
+    }
+    evt.currentTarget.className += " active";
+}
 
